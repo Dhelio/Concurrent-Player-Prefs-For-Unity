@@ -11,7 +11,7 @@ public static class ConcurrentPlayerPrefs {
 #if !UNITY_EDITOR && UNITY_ANDROID
     public const string SavesDirectory = @"sdcard/somefolder/";
     public const string SavesFile = SavesDirectory + @"/somefile";
-#else
+#elif UNITY_EDITOR || UNITY_STANDALONE_WIN
     public const string SavesDirectory = "D:\\somefolder\\";
     public const string SavesFile = SavesDirectory + "somefile";
 #endif
